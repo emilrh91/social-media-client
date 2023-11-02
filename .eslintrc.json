@@ -7,7 +7,10 @@
       "overrides": [
         {
           "files": ["**/*.test.js"],
-          "env": { "jest": true },
+          "env": {
+            "node" : true,  
+            "jest": true 
+        },
           "plugins": ["jest"],
           "extends": ["plugin:jest/recommended"],
           "rules": { "jest/prefer-expect-assertions": "off" }
