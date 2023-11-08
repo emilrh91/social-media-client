@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1699449972828" clover="3.2.0">
+  <project timestamp="1699449972828" name="All files">
+    <metrics statements="10" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2" elements="14" coveredelements="12" complexity="0" loc="10" ncloc="10" packages="1" files="2" classes="2"/>
+    <file name="login.js" path="C:\Users\Emil\Desktop\Front end\workflow\social-media-client\src\js\api\auth\login.js">
+      <metrics statements="8" coveredstatements="7" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="12" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="15" count="1" type="stmt"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+    </file>
+    <file name="logout.js" path="C:\Users\Emil\Desktop\Front end\workflow\social-media-client\src\js\api\auth\logout.js">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
