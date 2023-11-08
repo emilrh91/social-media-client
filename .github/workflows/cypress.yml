@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Install Dependencies
       run: npm install
@@ -25,13 +25,13 @@ jobs:
       shell: bash
 
     - name: Run Cypress Tests
-      run: npm run test-e2e
+      run: npm run test:e2e:ci
       env:
         CI: true
 
     - name: Upload Cypress Artifacts on Failure
       if: failure()
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: cypress-artifacts
         path: |
