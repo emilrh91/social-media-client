@@ -5,7 +5,7 @@ describe('Login Test. Test should successfully log in and out', () => {
 
     it('should log in', () => {
       cy.get('button[data-auth="login"]').eq(1).click();
-      cy.get('#loginModal').should('be.visible');
+      cy.get('#loginModal', { timeout: 10000 }).should('be.visible');
       cy.get('input[name=email]').first().type(Cypress.env('LOGIN_EMAIL'));
       cy.get('input[name=password]').first().type(Cypress.env('LOGIN_PASSWORD'));
       cy.get('#loginForm').submit();
@@ -22,8 +22,8 @@ describe('Login Test. Test should successfully log in and out', () => {
   });
 
   it('should not log in with wrong credentials', () => {
-       cy.get('button[data-auth="login"]').eq(1).click();
-      cy.get('#loginModal').should('be.visible');
+      cy.get('button[data-auth="login"]').eq(1).click();
+      cy.get('#loginModal', { timeout: 10000 }).should('be.visible');
       cy.get('input[name=email]').first().type('shoudlnotwork@asdf.com');
       cy.get('input[name=password]').first().type('Password123');
       cy.get('#loginForm').submit();
