@@ -1,0 +1,39 @@
+name: Cypress Tests
+
+on:
+  push:
+    branches: [ workflow ]
+  pull_request:
+    branches: [ main, workflow ]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build CSS from SASS
+      run: npm run build
+
+    - name: Start Server
+      run: npm start &
+      shell: bash
+
+    - name: Run Cypress Tests
+      run: npm run test-e2e
+      env:
+        CI: true
+
+    - name: Upload Cypress Artifacts on Failure
+      if: failure()
+      uses: actions/upload-artifact@v2
+      with:
+        name: cypress-artifacts
+        path: |
+          cypress/screenshots
+          cypress/videos
