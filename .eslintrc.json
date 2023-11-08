@@ -15,7 +15,8 @@
     {
       "files": ["**/*.test.js"],
       "env": {
-        "jest": true
+        "jest": true,
+        "node": true
       },
       "plugins": ["jest"],
       "extends": ["plugin:jest/recommended"],
